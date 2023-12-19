@@ -26,3 +26,8 @@ EXPOSE $PORT
 # Setting the entry process that spins up and starts the application
 ENTRYPOINT ["npm","start"]
 
+# docker build -t vdr007/nodeapp -f node.Dockerfile .
+# docker network create --driver=bridge node-mongo
+# docker run -d --net=node-mongo --name nodeapp -p 3000:3000 -v $(pwd)/logs:/var/www/logs vdr007/nodeapp
+# docker run -d --net=node-mongo --name mongodb mongo
+# docker exec nodeapp node dbSeeder.js
